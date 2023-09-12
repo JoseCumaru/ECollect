@@ -1,0 +1,32 @@
+<rs_script>
+    // Define as variáveis necessárias para o script
+    rs_allocation inputImage;
+    rs_allocation outputImage;
+    int width;
+    int height;
+    float radius;
+
+    void root(const uchar4* input, uchar4* output, uint32_t x, uint32_t y) {
+    // Converte o pixel de entrada para um ponto flutuante para que possa ser desfocado
+    float4 pixel = rsUnpackColor8888(*input).rgba;
+
+    // Aplica o efeito de desfoque usando o raio definido
+    float4 blur = 0;
+    float count = 0;
+    for (int dx = -radius; dx &lt;= radius; dx++) {
+    for (int dy = -radius; dy &lt;= radius; dy++) {
+    if ((x + dx >= 0) &amp;&amp; (y + dy >= 0) &amp;&amp; (x + dx &lt;= width) &amp;&amp; (y + dy &lt;= height)) {
+    float4 curPixel = rsUnpackColor8888(rsGetElementAt_uchar4(inputImage, x + dx, y + dy)).rgba;
+    float weight = 1 - length(float2(dx, dy)) / radius;
+    blur += weight * curPixel;
+    count += weight;
+    }
+    }
+    }
+    blur /= count;
+
+    // Define o pixel de saída para o pixel desfocado
+    *output = rsPackColorTo8888(blur);
+    }
+    }
+</rs_script>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ECollect"
+        tools:targetApi="31" >
+        <activity
+            android:name=".ConfigActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.formlogin.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.formsolicitar.SolicitarConfirmar"
+            android:exported="false" />
+        <activity
+            android:name=".view.formsolicitar.SolicitarE"
+            android:exported="false" />
+        <activity
+            android:name=".Historico"
+            android:exported="false" />
+        <activity
+            android:name=".view.Apresentacao"
+            android:exported="false" />
+        <activity
+            android:name=".CarregamentoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.formsolicitar.SolicitarTL"
+            android:exported="false" />
+        <activity
+            android:name=".MenuPrincipal"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.formcadastro.CadastrarActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".view.SplashScreen"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+    </application>
+
+</manifest>

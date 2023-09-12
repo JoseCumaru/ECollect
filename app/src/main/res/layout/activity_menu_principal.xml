@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradiente"
+    tools:context=".MenuPrincipal">
+
+    <TextView
+        android:id="@+id/textOla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Olá, "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNomeusuarioR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="userName"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textOla"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="userName"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Você sabia?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textViewFraseAleatoria"
+        android:layout_width="334dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:text="texto aleatorio"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blurView"
+        android:layout_width="320dp"
+        android:layout_height="490dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFraseAleatoria"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="315dp"
+            android:layout_height="485dp"
+            android:layout_gravity="center"
+            android:background="@color/cinza"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <ImageButton
+                android:id="@+id/imageButtonHelp"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/roundbutton"
+                android:backgroundTint="@color/green"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/informacoes" />
+
+            <ImageButton
+                android:id="@+id/imageButtonApresentar"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/roundbutton"
+                android:backgroundTint="@color/green"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/estampas_de_sapatos" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSolicitar"
+                style="@android:style/Widget.DeviceDefault.ImageButton"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/roundbutton"
+                android:backgroundTint="@color/green"
+                android:contentDescription="TODO"
+                android:longClickable="true"
+                android:nestedScrollingEnabled="false"
+                android:onClick="Onclick"
+                android:padding="20dp"
+                android:scaleType="fitStart"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_reciclar2"
+                tools:ignore="NotSibling" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/roundbutton"
+                android:backgroundTint="@color/green"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonApresentar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonSolicitar"
+                app:srcCompat="@drawable/construcao_de_casas" />
+
+            <ImageButton
+                android:id="@+id/imageButtonHistorico"
+                style="@style/Widget.AppCompat.ImageButton"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/roundbutton"
+                android:backgroundTint="@color/green"
+                android:onClick="exibirHistorico"
+                android:padding="20dp"
+                android:scaleType="fitStart"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/relogio_calendario"
+                tools:ignore="NotSibling" />
+
+            <ImageButton
+                android:id="@+id/imageButtonSettings"
+                android:layout_width="135dp"
+                android:layout_height="135dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/roundbutton"
+                android:backgroundTint="@color/green"
+                android:padding="20dp"
+                android:scaleType="fitCenter"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/imageButtonHelp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageButtonHistorico"
+                app:srcCompat="@drawable/carrinho_de_compras" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nova Solicitação"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonSolicitar"
+                app:layout_constraintEnd_toEndOf="@+id/imageButtonSolicitar"
+                app:layout_constraintStart_toStartOf="@+id/imageButtonSolicitar" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historico"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonHistorico"
+                app:layout_constraintEnd_toEndOf="@+id/imageButtonHistorico"
+                app:layout_constraintStart_toStartOf="@+id/imageButtonHistorico" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passo a Passo"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonApresentar"
+                app:layout_constraintEnd_toEndOf="@+id/imageButtonApresentar"
+                app:layout_constraintStart_toStartOf="@+id/imageButtonApresentar" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Informações"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonHelp"
+                app:layout_constraintEnd_toEndOf="@+id/imageButtonHelp"
+                app:layout_constraintStart_toStartOf="@+id/imageButtonHelp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Empresas"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton3"
+                app:layout_constraintStart_toStartOf="@+id/imageButton3" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Comprar Itens"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonSettings"
+                app:layout_constraintEnd_toEndOf="@+id/imageButtonSettings"
+                app:layout_constraintStart_toStartOf="@+id/imageButtonSettings" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </eightbitlab.com.blurview.BlurView>
+
+    <ImageButton
+        android:id="@+id/buttonConfig"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="26dp"
+        android:background="@android:color/transparent"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/outline_settings_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textNomeusuarioR"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="______________________________________________"
+        android:textColor="@color/cinza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNomeusuarioR" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

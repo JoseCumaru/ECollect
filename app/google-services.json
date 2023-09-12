@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "558913494263",
+    "project_id": "dbecollect",
+    "storage_bucket": "dbecollect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558913494263:android:c9ad1bf9b1cc111a7c87f2",
+        "android_client_info": {
+          "package_name": "com.example.ecollect"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558913494263-fkdvs50ug4ph6cp5sev4iaqr26ci39kq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-DsboadAbKhVsCQwm4Ao6nqqhjE7NKLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "558913494263-fkdvs50ug4ph6cp5sev4iaqr26ci39kq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
